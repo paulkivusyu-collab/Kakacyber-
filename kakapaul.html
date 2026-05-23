@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kakacyber - Your Online Cyber Assistant</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #00b4ff;
+      --gradient: linear-gradient(135deg, #00b4ff, #6b00ff);
+      --dark: #0a0a1f;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f4f7ff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--dark);
+      color: white;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      padding: 1rem 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    nav {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    .logo img {
+      height: 65px;
+      width: auto;
+      transition: transform 0.3s;
+    }
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+    }
+    .nav-links a:hover { color: var(--primary); }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(10,10,31,0.85), rgba(10,10,31,0.85)), url('https://picsum.photos/id/1015/2000/1200') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+    }
+    .hero-content h1 {
+      font-size: 4rem;
+      margin: 1.5rem 0 1rem;
+    }
+    .btn {
+      padding: 16px 40px;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover { transform: scale(1.08); }
+
+    section { padding: 100px 20px; max-width: 1300px; margin: 0 auto; }
+    h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: 0.4s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .price-category {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .price-category h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .contact-bar {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 20px;
+      text-align: center;
+    }
+
+    footer {
+      background: #05050f;
+      color: #aaa;
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+    }
+    .footer-content {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 1.5rem 0 2rem;
+    }
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #1a1a2e;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.7rem;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      transform: translateY(-6px) scale(1.1);
+      background: #00b4ff;
+      box-shadow: 0 8px 20px rgba(0, 180, 255, 0.3);
+    }
+    footer p {
+      margin: 0.4rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="logo.png" alt="Kakacyber Logo">
+      </div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Trusted Online Cyber Partner</h1>
+      <p>Fast • Reliable • Professional Services in Nairobi</p>
+      <button class="btn" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">
+        View Our Prices
+      </button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <i class="fas fa-file-invoice"></i>
+        <h3>KRA Returns</h3>
+        <p>Fast, accurate & stress-free tax filing.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-file-alt"></i>
+        <h3>CV Writing</h3>
+        <p>Professional, powerful & impressive CVs.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-id-card"></i>
+        <h3>eCitizen & Government Services</h3>
+        <p>IDs, Passports, NTSA, HELB, NSSF & more.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-print"></i>
+        <h3>Printing & Photocopy</h3>
+        <p>High quality printing and copying services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section (Cleaned) -->
+  <section id="pricing" style="background:#f8f9ff;">
+    <h2>Our Pricing</h2>
+    <div class="price-category">
+      <h3>Prices Available on Request</h3>
+      <p style="margin-top: 1rem; color: #555;">
+        Contact us for current pricing on all services.<br>
+        <strong>Fast & Reliable Service in Nairobi</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact-bar">
+    <h2>Contact Kakacyber Today</h2>
+    <p style="font-size:1.4rem; margin:1.5rem 0;">
+      <strong>Email:</strong> paulkivusyu@gmail.com<br><br>
+      <strong>WhatsApp / Call:</strong> <a href="https://wa.me/254746486377" style="color:#00ff9d; text-decoration:none;">0746 486 377</a>
+    </p>
+    <p>
+      <a href="https://www.facebook.com" target="_blank" style="color:var(--primary); font-size:1.2rem;">
+        📘 Facebook: Paul Kivusyu
+      </a>
+    </p>
+  </section>
+
+  <!-- Footer with Social Buttons -->
+  <footer>
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="mailto:paulkivusyu@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="#" target="_blank" title="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/254746486377" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p>&copy; 2026 Kakacyber • Nairobi, Kenya</p>
+      <p>You relax, we handle the rest ❤️</p>
+    </div>
+  </footer>
+
+</body>
+</html>
